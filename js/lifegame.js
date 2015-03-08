@@ -9,20 +9,10 @@ var t_context;
 var time;
  
 window.onload = function() {
-  var str = "x = 198, y = 233, rule = B3/S23\n8$134b3o$134b3o$135bo$135bo$135bo$134bobo6bo$142b3o$141bobobo$134bobo\n4bobobo$135bo6b3o$135bo7bo$135bo$134b3o$134b3o6bo$142b3o$122b6o13bobob\no$121bo6bo12bobobo$120bo8bo12b3o$121bo6bo14bo$122b6o$136b2o$136bobo8bo\n2bo4bo2bo$136bo8b3o2b6o2b3o$147bo2bo4bo2bo8$153bo2bob2obo2bo$153b4ob2o\nb4o$153bo2bob2obo2bo3$148b3o2$53b3o91bo3bo$52bo3bo90bo3bo$52bo3bo$53b\n3o92b3o3$148b3o2$53b3o91bo3bo$52bo3bo58bobo29bo3bo$52bo3bo58b2o$53b3o\n8b2o50bo31b3o$62bo4bo$61bo6bo$60bo8bo$60bo8bo$60bo8bo$61bo6bo$62bo4bo\n8bo$64b2o9b3o8bo$74b2ob2o6b3o32b3o$73b3ob3o4b2ob2o33bo$73b3ob3o3b3ob3o\n31bo$73b3ob3o3b3ob3o$63bo9b3ob3o3b3ob3o$62b2o10b2ob2o4b3ob3o$62bobo10b\n3o6b2ob2o$76bo8b3o$26bo59bo$25b3o$24b2ob2o$23b3ob3o$23b3ob3o$23b3ob3o\n51bo$23b3ob3o50bobo$24b2ob2o50b2o$25b3o50bo$26bo51bobobobo$78b3obob2o$\n82bobo$26bo56bo24b5o$13bo6bo6bo79bo4bo$12b2o6b2o3b3o84bo$11b3o6b3o84bo\n3bo$12b2o6b2o87bo$13bo6bo$80bo$79bobo$78b2obob3o$79bobobobo$85bo$83b2o\n$81bobo$65bo2bob2obo2bo5bo$65b4ob2ob4o19bo$65bo2bob2obo2bo17bobo$95b2o\n3$31b3o52b3o$30bo3bo50bo3bo$29bo5bo48bo5bo2$28bo7bo46bo7bo5b3o$28bo7bo\n6bo39bo7bo$41b2o53bo3bo$29bo5bo6b2o40bo5bo5bo3bo$30bo3bo50bo3bo$31b3o\n52b3o8b3o15b2o$114b2o$116bo$97b3o$18b2o6b2o$17bo2bo4bo2bo34b2o31bo3bo$\n17bo2bo4bo2bo21b2o10bobo31bo3bo$17bo2bo4bo2bo19bo4bo10bo$18b2o6b2o19bo\n6bo42b3o$46bo8bo$46bo8bo$46bo8bo$47bo6bo$48bo4bo$50b2o8b3o$59bo3bo$59b\no3bo$60b3o5$60b3o$59bo3bo$59bo3bo$60b3o9$61bobo$62b2o$62bo5$156b2o$\n156bobo$156bo9$173bo2bob2obo2bo$173b4ob2ob4o$173bo2bob2obo2bo3$168b3o\n2$167bo3bo$167bo3bo2$168b3o3$168b3o2$167bo3bo$167bo3bo2$168b3o5$104bo$\n102bobo$103b2o2$140b3o$142bo$141bo15$111b6o$110bo6bo$109bo8bo$110bo6bo\n$111b6o3$123b3o$122bo3bo$121bo5bo2$120bo7bo$120bo7bo2$121bo5bo$122bo3b\no$123b3o!";
+  var str = "x = 202, y = 236, rule = B3/S23\n2$126bo$125bobo3$125b3o$125b3o$126bo6b3o2$132bo3bo$126bo5bo3bo$125b3o$\n125b3o5b3o3$125bobo5b3o$114b4o8bo$113b6o13bo3bo$112b8o12bo3bo$111b2o6b\n2o$112b8o13b3o$113b6o$114b4o$132bobo3bo2bob2obo2bo$132b2o4b4ob2ob4o$\n133bo4bo2bob2obo2bo8$144bo2bob2obo2bo$143b2o2bo4bo2b2o$144bo2bob2obo2b\no2$140bo$140bo$45bo93b3o$44b3o$43bobobo$43bobobo91b3o$44b3o93bo$45bo\n81bo12bo$127b2o11bo$126bobo11bo$45bo93b3o$44b3o$43bobobo$43bobobo91b3o\n$44b3o93bo$45bo94bo$52bo6bo$51b2o6b2o$50b3o6b3o$51b2o6b2o$52bo6bo$43bo\n22b3o$41b2o22bo3bo6b3o$42b2o20bo5bo4bo3bo$74bo5bo$63bo7bo$63bo7bobo7bo\n$73bo7bo9bo$64bo5bo20bobo$65bo3bo4bo5bo10b2o$66b3o6bo3bo$16b3o57b3o$\n15bo3bo$14bo5bo2$13bo7bo$13bo7bo2$14bo5bo$15bo3bo$16b3o$60bo$58b2o$59b\n2o$3b2o6b2o$2bo2bo4bo2bo$2bo2bo4bo2bo115b2o$2bo2bo4bo2bo115bobo$3b2o6b\n2o118bo$85b3o43b2o$87bo$86bo2$80bo$79b2o$79bobo$56bo2bob2obo2bo22b3o$\n55b2o2bo4bo2b2o21bo$56bo2bob2obo2bo23bo$31bobo$32b2o$23bo8bo36b2o7bo$\n22b3o45b2o5b3o$21b5o43bo6b5o2$89bo$89bo$88b3o3$21b5o50b5o7b3o$22b3o52b\n3o9bo$23bo54bo10bo$89bo$89bo$9b2o6b2o69b3o$8bo2bo4bo2bo$7b6o2b6o$8bo2b\no4bo2bo68b3o$9b2o6b2o7bobo9bo6bo43bo$27b2o8b2o6b2o42bo$27bo8b3o6b3o$\n37b2o6b2o$38bo6bo$52bo$51b3o$50bobobo$50bobobo$51b3o$52bo3$52bo$51b3o$\n50bobobo$50bobobo$51b3o$52bo79b2o$131b2o$133bo21$69bo$67bobo$68b2o$\n164bo2bob2obo2bo$163b2o2bo4bo2b2o$164bo2bob2obo2bo2$160bo$160bo$159b3o\n3$159b3o$160bo$147bo12bo$147b2o11bo$146bobo11bo$159b3o3$159b3o$160bo$\n160bo19$109bo$110b2o$109b2o3$103b4o$102b6o$101b8o$100b2o6b2o$101b8o$\n102b6o$103b4o$115bo$114b3o$113b5o7$113b5o$114b3o$115bo!";
   var field = rle2ary(str);
-  //var field = [
-  //  0,0,0,0,0,
-  //  0,0,0,0,0,
-  //  0,1,1,1,0,
-  //  0,0,0,0,0,
-  //  0,0,0,0,0,
-  //];
 
-  var tempField = new Array(X_SIZE*Y_SIZE);
-  //for (var i=0; i<field.length; i++) {
-  //  field[i] = Math.floor(Math.random()*2);
-  //}
+  var tf = new Array(X_SIZE*Y_SIZE);
   canvas = document.getElementById('world');
   t_canvas = document.createElement('canvas');
   canvas.width = t_canvas.width = X_SIZE * CELL_SIZE;
@@ -30,36 +20,40 @@ window.onload = function() {
   context = canvas.getContext('2d');
   t_context = t_canvas.getContext('2d');
   t_context.fillStyle = 'rgb(211, 85, 149)';
-  update(field, tempField);
+  update(field, tf);
   setInterval(function() {document.getElementById("time").innerHTML = time;}, 1000);
 }
  
-function update(field, tempField) {
+function update(field, tf) {
   var start = + new Date();
   var n = 0;
-  tempField = field.slice();
-  for (var i=0; i<tempField.length; i++) {
+  tf = field.slice();
+  time = new Date() - start;
+  var length = tf.length;
+  for (var i=0; i<length; i++) {
     n = 0;
-    for (var s=-1; s<2; s++) {
-      for (var t=-1; t<2; t++) {
+    for (var s=-1; s<=1; s++) {
+      var cc = i+s*X_SIZE;
+      for (var t=-1; t<=1; t++) {
         if (s==0 && t==0) continue;
-        var c = i+s*X_SIZE+t;
-        if (c>=0 && c<tempField.length) {
-          if (i<c && c%X_SIZE!=0 || i>c && c%X_SIZE!=X_SIZE-1) {
-            if (tempField[c]) n++;
-          }
+        var c = cc+t;
+        if (c>=0 && c<length) {
+          // パフォーマンスのため境界値チェックしない
+          if (tf[c]) n++;
         }
       }
     }
-    if (tempField[i] && (n==2||n==3)) {
-      field[i] = 1;
-    } else if (!tempField[i] && n==3) {
-      field[i] = 1;
-    } else field[i] = 0;
+    if (tf[i]) {
+      if (n==2||n==3) field[i] = 1;
+      else field[i] = 0;
+    } else {
+      if (n==3) field[i] = 1;
+      else field[i] = 0;
+    }
   }
   draw(field);
   time = new Date() - start;
-  setTimeout(update, 1000/FPS, field, tempField);
+  setTimeout(update, 1000/FPS, field, tf);
 }
  
 function draw(field) {
@@ -75,8 +69,8 @@ function rle2ary(str) {
   var pos = str.indexOf('\n');
   var xy = str.substr(0, pos).match(/x = (\d*), y = (\d*),/);
   
-  var width = xy[1];
-  var height = xy[2];
+  var width = +xy[1];
+  var height = +xy[2];
   var res = [];
   for (var i = 0; i < width * height; i++) {
     res[i] = 0;
@@ -91,8 +85,6 @@ function rle2ary(str) {
     switch (str[i]) {
       case 'b':
         num = num ? num : 1;
-        //for (var c = 0; c < num; c++)
-        //  res[y][x+c] = 1;
         x += num;
         break;
       case 'o':
