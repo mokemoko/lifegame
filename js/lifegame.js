@@ -24,13 +24,16 @@ window.onload = function() {
   setInterval(function() {document.getElementById("time").innerHTML = time;}, 1000);
 }
  
-function update(field, tf) {
+function update(field) {
   var start = + new Date();
-  var n = 0;
-  tf = field.slice();
-  var length = tf.length;
+  var cp = [];
+  var length = field.length;
+  for (var i=0; i<length; i++)
+    cp[i] = 0;
   for (var i=0; i<length; i++) {
-    n = 0;
+    if (field[i] == 0) {
+      continue;
+    }
     for (var s=-1; s<=1; s++) {
       var cc = i+s*X_SIZE;
       for (var t=-1; t<=1; t++) {
@@ -38,11 +41,14 @@ function update(field, tf) {
         var c = cc+t;
         if (c>=0 && c<length) {
           // パフォーマンスのため境界値チェックしない
-          if (tf[c]) n++;
+          cp[c]++;
         }
       }
     }
-    if (tf[i]) {
+  }
+  for (var i=0; i<length; i++) {
+    var n = cp[i]
+    if (field[i]) {
       if (n==2||n==3) field[i] = 1;
       else field[i] = 0;
     } else {
@@ -52,7 +58,7 @@ function update(field, tf) {
   }
   draw(field);
   time = new Date() - start;
-  setTimeout(update, 1000/FPS, field, tf);
+  setTimeout(update, 1000/FPS, field);
 }
  
 function draw(field) {
